@@ -1365,3 +1365,11 @@ html {
 .menu-card button {
   scroll-margin-bottom: 170px;
 }
+
+.home .nav__info .comment {
+  white-space: pre-line;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  text-align: left;
+}

@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { quotes } from "../lang/quotes";
 import { Clock, ForkKnife, Receipt, ArrowRight } from "@phosphor-icons/react";
 import {
   UserLink,
@@ -10,6 +12,9 @@ import { HorizontalFlex, Section } from "../components/Layout";
 import { Photo, Message } from "../components/Ui";
 
 export function HomePage() {
+  const [quote] = useState(
+    () => quotes[Math.floor(Math.random() * quotes.length)],
+  );
   const location = useLocation();
   const error =
     typeof location.state?.error === "string" ? location.state.error : "";
@@ -71,7 +76,7 @@ export function HomePage() {
           </span>
         </div>
       </Section>
-      <UserNav label="로그인 없이 메뉴를 고르고 주문을 확인하세요.">
+      <UserNav label={`오늘의 명언\n“${quote.text}”\n— ${quote.author}`}>
         <UserLink to="/check">주문 확인</UserLink>
         <UserLink to="/menu" primary>
           메뉴 선택
