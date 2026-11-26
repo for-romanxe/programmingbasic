@@ -1,0 +1,17 @@
+.food-photo {
+  width: 100%;
+  aspect-ratio: 473/303;
+  background-repeat: no-repeat;
+  background-size: 237.21% 462.71%;
+  background-position: 11.4% 31.3%;
+  background-color: #eee;
+}
+.food-photo--pork {
+  background-position: 88.6% 31.3%;
+}
+.food-photo--noodle {
+  background-position: 11.4% 74.1%;
+}
+.food-photo--bibimbap {
+  background-position: 88.6% 74.1%;
+}

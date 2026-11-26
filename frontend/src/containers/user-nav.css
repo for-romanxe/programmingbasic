@@ -1,0 +1,100 @@
+/* 계획서의 공통 레이아웃과 단계 이동 */
+.horizontal-flex {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.colored-section {
+  border-top: 3px solid #f08b24;
+  padding-top: 18px;
+}
+.nav__info,
+.nav__actions {
+  width: 50%;
+  flex: 1;
+}
+.nav__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.nav__actions > .button {
+  min-height: 48px;
+  flex: 1;
+}
+.food-photo {
+  display: block;
+  object-fit: cover;
+}
+.text-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.text-card h2 {
+  padding: 18px 20px;
+  font-size: 19px;
+}
+.text-card p {
+  padding: 0 20px 16px;
+}
+.text-card > .button {
+  width: 100%;
+  border-width: 0;
+}
+.text-card.selected {
+  border-color: var(--orange);
+}
+.payment-status--1 {
+  background: #e9f5ed;
+  color: #175c35;
+}
+.payment-status--2 {
+  background: #fbeae6;
+  color: #8c2c18;
+}
+.step-action {
+  margin-top: 28px;
+  width: 100%;
+}
+.home-links {
+  display: flex;
+  gap: 12px;
+}
+.home-error {
+  margin-bottom: 24px;
+}
+@media (max-width: 700px) {
+  .bottom-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav__info,
+  .nav__actions {
+    width: 100%;
+  }
+  .nav__info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav__actions > .button {
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+  .nav__actions {
+    justify-content: stretch;
+  }
+  .bottom-bar {
+    position: sticky;
+  }
+  .text-card h2 {
+    font-size: 18px;
+  }
+}
